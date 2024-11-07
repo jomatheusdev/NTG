@@ -11,6 +11,7 @@
     padding: 0;
 }
 
+
 header {
     text-align: center;
     padding: 1em;
@@ -27,14 +28,19 @@ header img {
     background-color: var(--gray-light);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding-bottom: 100px;
 }
 
 .value-proposition {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
 }
+
 
 .card {
     padding: 2em;
