@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Coverflow do Zero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>NTG</h1>
+    </header>
+
+    <section id="content--first">
+        <div class="value-proposition">
+            <h1>Gerencie seu estoque de forma 100% eficiente.</h1>
+            <div class="card">
+                <p>Economize até 80% do seu tempo, aumentando sua margem de produtividade.</p>
+                <p>A NTG é a melhor amiga do seu empreendimento, ao contatá-la, você estará aumentando a margem de lucro
+                    e de ampliação da sua empresa!</p>
+                <p>Baixar Demo</p>
+                <div class="button-container">
+                    <button>CADASTRAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="coverflow-container">
+            <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+            <div class="coverflow-wrapper">
+                <div class="coverflow-slide">Slide 1</div>
+                <div class="coverflow-slide">Slide 2</div>
+                <div class="coverflow-slide">Slide 3</div>
+                <div class="coverflow-slide">Slide 4</div>
+                <div class="coverflow-slide">Slide 5</div>
+            </div>
+            <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="indicators"></div>
+
+        <script src="swipper.js"></script>
+    </section>
+
+    <section id="content--second">
+        <div class="circle">
+            <ul>
+                <li>
+                    <img src="./images/mulher.jpg" alt="Foto de uma mulher">
+                    <div class="depoiment">
+                        <h2>Depoimento da mulher</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./images/homem.jpg" alt="Foto de um homem">
+                    <div class="depoiment">
+                        <h2>Depoimento do homem</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./images/ceo.jpg" alt="Foto de um CEO">
+                    <div class="depoiment">
+                        <h2>Depoimento do CEO</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div id="top">
+        <a href=""><img src="./images/seta.png" alt=""></a>
+    </div>
+</body>
+
+</html>

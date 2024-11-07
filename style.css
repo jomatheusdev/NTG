@@ -1,0 +1,251 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray-light: #f4f4f4;
+    --gray-dark: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 1em;
+    color: var(--gray-light);
+    background-color: var(--gray-dark);
+    width: 100%;
+}
+
+header img {
+    width: 100px;
+}
+
+#content--first {
+    background-color: var(--gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.value-proposition {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card {
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 20px;
+    margin: 50px 0;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card p{
+    margin: 1em;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Coverflow Swiper Styles */
+.coverflow-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    margin: 50px 0;
+    perspective: 1000px;
+    /* Essencial para o efeito 3D */
+}
+
+.coverflow-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.coverflow-slide {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para slides ativos e adjacentes */
+.coverflow-slide.active {
+    transform: translateZ(0px) scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.coverflow-slide.prev {
+    transform: translateX(-150px) rotateY(45deg) scale(0.8);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.coverflow-slide.next {
+    transform: translateX(150px) rotateY(-45deg) scale(0.8);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Estilos dos botões de navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--gray-light);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--gray-light);
+}
+
+.nav-button.prev {
+    left: -50px;
+}
+
+.nav-button.next {
+    right: -50px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #007BFF;
+}
+
+/* Circle Section Styles */
+.circle {
+    position: relative;
+    bottom: 120px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.circle ul {
+    display: flex;
+    list-style: none;
+    gap: 5em;
+}
+
+.circle li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle li img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1em solid var(--gray-light);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1em;
+}
+
+.depoiment {
+    max-width: 200px;
+    color: var(--gray-dark);
+}
+
+.depoiment h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.depoiment p {
+    font-size: 0.9em;
+    color: var(--gray-dark);
+}
+
+footer {
+    background-color: var(--gray-dark);
+    color: var(--gray-light);
+    padding: 1.5em;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+footer li{
+    list-style: none ;
+}
+
+footer a{
+    color: var(--gray-light);
+    text-decoration: none;
+}
+#top a img {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 3px; /* Deixa a imagem completamente circular */
+    padding: 0.8em; /* Diminui o espaçamento interno */
+    background-color: #a3a3a38e;; /* Mantém o fundo semi-transparente */
+}
