@@ -3,12 +3,15 @@
     --white: #ffffff;
     --gray-light: #f4f4f4;
     --gray-dark: #333333;
+    --fonte: "Poppins", sans-serif;
+    --fonte-dois: "Roboto", sans-serif;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--fonte)
 }
 
 
@@ -22,38 +25,42 @@ header {
 
 header img {
     width: 100px;
+    border-radius: 30%;
 }
 
 #content--first {
-    background-color: var(--gray-light);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--gray-light);
     padding-bottom: 100px;
+    height: 100vh;
 }
 
 .value-proposition {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.value-proposition h1{
+    font-size: 4em;
+    text-align: left;
 }
 
 
 .card {
-    padding: 2em;
-    background-color: var(--white);
     border-radius: 20px;
-    margin: 50px 0;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
 .card p{
-    margin: 1em;
+    font-family: var(--fonte-dois);
+    margin: 1em 0em;
 }
 
 .button-container {
@@ -63,7 +70,7 @@ header img {
 .button-container button {
     padding: 10px 20px;
     background-color: #007BFF;
-    color: white;
+    color: var(--gray-dark);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -73,13 +80,17 @@ header img {
     background-color: #0056b3;
 }
 
+#button--detail {
+    background-color: transparent;
+    border: 1px solid var(--gray-dark);
+}
 /* Coverflow Swiper Styles */
 .coverflow-container {
     position: relative;
     width: 80%;
     max-width: 800px;
     height: 300px;
-    margin: 50px 0;
+    margin: 50px auto; /* Centraliza o contêiner e adiciona margem superior e inferior */
     perspective: 1000px;
     /* Essencial para o efeito 3D */
 }
@@ -97,8 +108,9 @@ header img {
 
 .coverflow-slide {
     position: absolute;
-    width: 200px;
-    height: 250px;
+    width: 400px;
+    height: 450px;
+    margin: 0 10px; /* Adiciona margem horizontal entre os slides */
     background-color: #ccc;
     border-radius: 10px;
     display: flex;
@@ -176,10 +188,22 @@ header img {
     background-color: #007BFF;
 }
 
+.content-swipper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+#content--second {
+    height: 100vh;
+    background-color: var(--gray-light);
+}
 /* Circle Section Styles */
 .circle {
     position: relative;
-    bottom: 120px;
+    bottom: 80px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
