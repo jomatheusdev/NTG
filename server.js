@@ -3,10 +3,12 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const fs = require('fs');
+const helmet = require('helmet'); // Adicione esta linha
 require('dotenv').config();
 
 const app = express();
 app.use(cors());
+app.use(helmet()); // Adicione esta linha
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
