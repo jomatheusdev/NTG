@@ -14,12 +14,18 @@
     font-family: var(--fonte)
 }
 
+body {
+    font-family: var(--fonte);
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background-color: var(--gray-light);
+}
 
 header {
     text-align: center;
     padding: 1em;
-    color: var(--gray-light);
-    background-color: var(--gray-dark);
+    color: var(--white);
+    background-color: var(--black);
     width: 100%;
 }
 
@@ -29,12 +35,13 @@ header img {
 }
 
 #content--first {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-light);
     padding-bottom: 100px;
     height: 100vh;
+    background-color: var(--gray-light);
 }
 
 .value-proposition {
@@ -45,22 +52,27 @@ header img {
     padding: 50px;
     max-width: 80%;
     margin: 0 auto;
+    color: var(--white);
 }
 
-.value-proposition h1{
-    font-size: 4em;
+.value-proposition h1 {
+    font-size: 3em; /* Ajuste o tamanho conforme necessário */
     text-align: left;
+    color: var(--gray-dark);
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
 }
-
 
 .card {
     border-radius: 20px;
     text-align: left;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
 }
 
 .card p{
     font-family: var(--fonte-dois);
     margin: 1em 0em;
+    color: var(--white);
 }
 
 .button-container {
@@ -70,7 +82,7 @@ header img {
 .button-container button {
     padding: 10px 20px;
     background-color: #007BFF;
-    color: var(--gray-dark);
+    color: var(--gray-light);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -82,8 +94,15 @@ header img {
 
 #button--detail {
     background-color: transparent;
-    border: 1px solid var(--gray-dark);
+    border: 1px solid var(--gray-light);
+    color: var(--gray-light);
 }
+
+#button--detail:hover {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+}
+
 /* Coverflow Swiper Styles */
 .coverflow-container {
     position: relative;
@@ -109,9 +128,9 @@ header img {
 .coverflow-slide {
     position: absolute;
     width: 400px;
-    height: 450px;
-    margin: 0 10px; /* Adiciona margem horizontal entre os slides */
-    background-color: #ccc;
+    height: 300px;
+    margin: 0 20px; /* Aumenta a margem horizontal entre os slides */
+    background-color: var(--gray-light);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -119,26 +138,33 @@ header img {
     font-size: 1.2em;
     backface-visibility: hidden;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra aos slides */
 }
 
 /* Estilos para slides ativos e adjacentes */
 .coverflow-slide.active {
     transform: translateZ(0px) scale(1);
-    opacity: 1;
-    z-index: 2;
+    opacity: 1 !important;
+    z-index: 5;
 }
 
 .coverflow-slide.prev {
     transform: translateX(-150px) rotateY(45deg) scale(0.8);
-    opacity: 0.6;
+    opacity: 0.2;
     z-index: 1;
 }
 
 .coverflow-slide.next {
     transform: translateX(150px) rotateY(-45deg) scale(0.8);
-    opacity: 0.6;
+    opacity: 0.2;
     z-index: 1;
+}
+
+.coverflow-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Estilos dos botões de navegação */
@@ -193,17 +219,23 @@ header img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 #content--second {
-    height: 100vh;
+    padding: 50px 20px;
     background-color: var(--gray-light);
+    text-align: center;
 }
-/* Circle Section Styles */
+
+#content--second h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--gray-dark);
+}
+
 .circle {
     position: relative;
-    bottom: 80px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -212,7 +244,8 @@ header img {
 .circle ul {
     display: flex;
     list-style: none;
-    gap: 5em;
+    gap: 3em;
+    padding: 0;
 }
 
 .circle li {
@@ -220,35 +253,98 @@ header img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 300px;
 }
 
 .circle li img {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 1em solid var(--gray-light);
+    border: 5px solid var(--gray-light);
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 1em;
 }
 
 .depoiment {
-    max-width: 200px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: var(--gray-dark);
 }
 
 .depoiment h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 0.5em;
+    color: var (--gray-dark);
 }
 
 .depoiment p {
-    font-size: 0.9em;
+    font-size: 1em;
+    color: var(--gray-dark);
+}
+
+/* Contact Form Styles */
+.content--third {
+    padding: 50px 20px;
+    background-color: var(--gray-light);
+    text-align: center;
+}
+
+.content--third h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--gray-dark);
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    font-size: 1.2em;
+    color: var(--gray-dark);
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--gray-dark);
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: var(--gray-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#form-response {
+    margin-top: 20px;
+    font-size: 1.2em;
     color: var(--gray-dark);
 }
 
 footer {
-    background-color: var(--gray-dark);
+    background-color: var(--black);
     color: var(--gray-light);
     padding: 1.5em;
 }
@@ -268,14 +364,29 @@ footer a{
     color: var(--gray-light);
     text-decoration: none;
 }
-#top a img {
+
+#top {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px; /* Espaçamento entre os links */
+    flex-direction: row-reverse;
+}
+
+#topo a img {
     width: 35px;
     height: 35px;
     object-fit: cover;
-    border-radius: 3px; /* Deixa a imagem completamente circular */
-    padding: 0.8em; /* Diminui o espaçamento interno */
-    background-color: #a3a3a38e;; /* Mantém o fundo semi-transparente */
+    border-radius: 3px;
+    padding: 0.8em;
+    background-color: #a3a3a38e;
+}
+
+#wpp a img{
+    width: 60px;
+    height: 60px;
+    padding: 0.8em;
 }

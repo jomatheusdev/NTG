@@ -9,7 +9,7 @@
         content="Conheça o NTG, o software de gerenciamento de estoque que otimiza a produtividade da sua empresa, reduzindo custos e tempo com tarefas operacionais. Cadastre-se agora!">
     <meta name="keywords"
         content="software de gerenciamento de estoque, gestão de estoque, otimização de produtividade, controle de estoque, NTG">
-        <meta name="google-site-verification" content="rrsVniRD88rhaYW5nu3QkJ_aqZR54nrFfxEHMYrJxBk" />
+    <meta name="google-site-verification" content="rrsVniRD88rhaYW5nu3QkJ_aqZR54nrFfxEHMYrJxBk" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +19,18 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3ZNSDLRJL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-M3ZNSDLRJL');
-      console.log('Google Analytics configurado');
+        gtag('config', 'G-M3ZNSDLRJL');
+        console.log('Google Analytics configurado');
     </script>
 </head>
 
 <body>
     <header>
-        <img src="./images/ntg-logo.png" alt="">
+        <img src="./images/ntg-logo.png" alt="NTG Logo">
     </header>
 
     <section id="content--first">
@@ -50,38 +50,33 @@
     </section>
 
     <section class="content-swipper">
-
         <div class="coverflow-container">
             <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
             <div class="coverflow-wrapper">
-                <div class="coverflow-slide">Slide 1</div>
-                <div class="coverflow-slide">Slide 2</div>
-                <div class="coverflow-slide">Slide 3</div>
-                <div class="coverflow-slide">Slide 4</div>
-                <div class="coverflow-slide">Slide 5</div>
+                <div class="coverflow-slide"><img src="./images/bi.jpg" alt=""></div>
+                <div class="coverflow-slide"><img src="./images/dados.jpg" alt=""></div>
+                <div class="coverflow-slide"><img src="./images/produto.jpg" alt=""></div>
             </div>
             <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
         </div>
-
         <div class="indicators"></div>
-
         <script src="swipper.js"></script>
-
     </section>
 
     <section id="content--second">
+        <h2>O que nossos clientes dizem</h2>
         <div class="circle">
             <ul>
                 <li>
                     <img src="./images/mulher.jpg" alt="Foto de uma mulher">
                     <div class="depoiment">
                         <h2>Depoimento da mulher</h2>
-                        <p>Estou extremamente satisfeito com o software de gerenciamento de estoque! A interface é
+                        <p>Estou extremamente satisfeita com o software de gerenciamento de estoque! A interface é
                             intuitiva e fácil de usar, o que facilitou a adaptação da minha equipe. Conseguimos
                             controlar os produtos de forma muito mais eficiente, evitando faltas ou excessos de
                             mercadoria. A automatização de alertas e relatórios tem sido um grande diferencial, trazendo
                             mais precisão e agilidade ao nosso dia a dia. Recomendo a todos que buscam otimizar a gestão
-                            do estoque!.</p>
+                            do estoque!</p>
                     </div>
                 </li>
                 <li>
@@ -109,6 +104,7 @@
             </ul>
         </div>
     </section>
+
     <section class="content--third">
         <h2>Entre em contato</h2>
         <form id="contact-form">
@@ -124,19 +120,25 @@
         </form>
         <div id="form-response"></div>
     </section>
+
     <footer>
         <nav>
             <ul>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/instagram (1).png" alt=""></a></li>
             </ul>
         </nav>
     </footer>
 
     <div id="top">
-        <a href=""><img src="./images/seta.png" alt=""></a>
+        <div id="topo">
+            <a href=""><img src="./images/seta.png" alt=""></a>
+        </div>
+        <div id="wpp">
+            <a href=""><img src="./images/whatsapp (2).png" alt=""></a>
+        </div>
     </div>
     <script>
         document.getElementById('contact-form').addEventListener('submit', async function (event) {
